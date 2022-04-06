@@ -2,6 +2,7 @@
 
 Vanilla Javascript tip calculator
 
-![tipcalculator](https://user-images.githubusercontent.com/38325801/161780840-dfc85213-e673-4252-a1c3-62346a10a05b.png)<br><br>
-![tipcalculator2](https://user-images.githubusercontent.com/38325801/161781770-38bde0af-76b4-4e80-b022-1397a28c7a51.png)<br><br>
-![tipcalculator3](https://user-images.githubusercontent.com/38325801/161781780-db437c1a-91c9-403a-be69-548c3c01be92.png)<br><br>
+![tipcalculator4laptop](https://user-images.githubusercontent.com/38325801/161969367-6fb0c5ce-e1d9-4a56-b7ab-bf2145b9b82b.png)<br><br>
+![tipcalculator2](https://user-images.githubusercontent.com/38325801/161969419-a8f3f6c6-8ea7-4cb2-840e-99a65b7def7c.png)<br><br>
+![tipcalculator3](https://user-images.githubusercontent.com/38325801/161969425-d318e4ab-cb4b-46a1-8fe3-7332c207b28b.png)<br><br>
+
