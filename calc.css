@@ -1,15 +1,26 @@
+@font-face {
+  font-family: party;
+  src: url(party.ttf);
+}
+
 body, html {
     box-sizing: border-box;
     background-image: url('calcBG.jpg');
     background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
     background-image: linear-gradient(rgba(3, 15, 34, 0.97), rgb(255, 255, 255, 0.7));
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,30 +32,22 @@ body, html {
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
-    margin-top: 20px;
 }
-
-@media screen and ( max-width: 650px) {
-    #container  {
-        width: 400px;
-        height: 650px;
-    }
-  }
 
   .topIcon {
       position: absolute;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 70px;
-      height: 70px;
-      background-image:linear-gradient(to top , rgb(0, 0, 0), rgb(42, 77, 105));
-      top: -98px;
+      width: 60px;
+      height: 60px;
+      background-color: rgb(4, 25, 43);
+      top: -88px;
       border-radius: 35px;
       z-index:5;
-      color:rgb(199, 219, 241);
-      font-size: 2.8rem;
-      transition: 1s ease-in-out;
+      color:rgb(170, 193, 218);
+      font-size: 2rem;
+      /* transition: 2s ease-in-out; */
   }
 
   .bottomIcon {
@@ -55,8 +58,8 @@ body, html {
       width: 30px;
       height: 30px;
       background-color: rgb(173, 0, 0);
-      bottom: 33px;
-      left: 20px;
+      bottom: 210px;
+      left: 120px;
       border-radius: 15px;
       z-index:5;
       color:rgb(255, 255, 255);
@@ -78,15 +81,15 @@ body, html {
       width: 30px;
       height: 30px;
       background-color: rgb(173, 0, 0);
-      bottom: 33px;
-      right: 20px;
+      bottom: 210px;
+      right: 120px;
       border-radius: 15px;
       z-index:5;
       color:rgb(255, 255, 255);
       font-size: 1rem;
       background-image:linear-gradient(to top , rgb(112, 0, 0), rgb(209, 1, 1));
       box-shadow:0px 2px 3px rgb(49, 70, 97);
-      transition: 1s ease-in-out;
+      transition: 2s ease-in-out;
   }
 
 .topIconRotate2 {
@@ -107,7 +110,7 @@ body, html {
 }
 
 h2 {
-    font-family: 'Stardos Stencil';
+    font-family:party;
     color:  rgb(146, 167, 190);
     letter-spacing: 5px;
     background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(27, 79, 139));
@@ -116,16 +119,11 @@ h2 {
     -webkit-text-fill-color: transparent;
 }
 
-@media screen and ( max-width: 650px) {
-    h2 {
-        letter-spacing: 0px;
-    }
-  }
-
 .howMuch {
     text-align: center;
-    font-family: times;
-    font-size: 18px;
+    font-family: party;
+    letter-spacing: 3px;
+    font-size: 1rem;
     color: rgb(233, 233, 233);
     margin-top: 0px;
 }
@@ -133,11 +131,13 @@ h2 {
 #billAmt {
     width: 100%;
     padding: 10px 10px 10px 10px;
-    font-size: 14px;
+    font-size: .8rem;
     border: 2px solid rgb(255, 255, 255);
     background-color: transparent;
     outline: none;
     color:white;
+    font-family: party;
+    letter-spacing: 3px;
 }
 
 .bill {
@@ -150,13 +150,14 @@ h2 {
 }
 
 #billAmt::placeholder {
-    color: rgb(189, 189, 189);
+    color: rgb(211, 211, 211);
 }
 
 .service {
     text-align: center;
-    font-family: times;
-    font-size: 18px;
+    font-family: party;
+    letter-spacing: 3px;
+    font-size: 1rem;
     color:  rgb(255, 255, 255);
 }
 
@@ -166,8 +167,9 @@ select {
 
 .howMany {
     text-align: center;
-    font-family: times;
-    font-size: 18px;
+    font-family: party;
+    letter-spacing: 3px;
+    font-size: 1rem;
     color:  rgb(255, 255, 255);
 }
 
@@ -180,19 +182,20 @@ select {
 #serviceQual {
     position: relative;
     padding: 10px;
-    font-family: arial;
-    font-size: 18px;
+    font-family: party;
+    font-size: .8rem;
+    letter-spacing: 3px;
     color: rgb(255, 255, 255);
     width: 100%;
     border-style: none;
     outline: none;
     background-color: transparent;
-    text-align: center;
     border: 5px solid white;
 }
     
 option {
     color: rgb(4, 29, 44);
+    font-size: 1.2rem;
 }
 
 .numPeople {
@@ -208,26 +211,22 @@ option {
     font-size: 1.2rem;
     width: 15%;
     border-style: none;
-    color: rgb(3, 29, 51);
+    color: rgb(124, 0, 0);
     box-shadow:0px 1px 5px rgb(13, 26, 43);
     outline: none;
     border: 5px solid rgb(168, 0, 0);
 } 
 
-@media screen and ( max-width: 650px) {
-    #people  {
-       width: 22%;
-    }
-}
-
 #people::placeholder {
     color: rgb(168, 168, 168);
     font-size: 1rem;
+    font-family: party;
+    letter-spacing: 3px;
 }
 
 .btn {
     width: 65%;
-    margin-top: 30px;
+    margin-top: 18px;
   }
 
 #myButton {
@@ -236,30 +235,27 @@ option {
     width: 100%;
     height: 60px;
     background-image:linear-gradient(to top , rgb(112, 0, 0), rgb(209, 1, 1)); 
-    font-family: arial;
+    font-family: party;
+    letter-spacing: 5px;
     color: white;
-    font-size: 28px;
+    font-size: 1.6rem;
     border-style: none;
     box-shadow:0px 1px 5px rgb(13, 26, 43);
-cursor: pointer;
+    cursor: pointer;
 }
 
 #totalTip {
-    margin-top: 20px;
+    margin-top: 15px;
     width: 65%;
-    font-family: Times;
-    font-size:3rem;
-    color: rgb(133, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size:3.4rem;
+    font-weight: bold;
+    color: rgb(153, 0, 0);
     text-align: center;
     border-bottom: 4px dotted rgb(128, 0, 0);
     padding-bottom: 10px;
-}
-
-@media screen and ( max-width: 650px) {
-    #totalTip  {
-        margin-top: 20px;
-    }
-}
+    text-shadow: 0px 2px 3px rgb(32, 68, 97);
+} 
 
 .clear {
     width: 40%;
@@ -268,18 +264,12 @@ cursor: pointer;
     margin-bottom: 35px;
 }
 
-@media screen and ( max-width: 650px) {
-    .clear {
-        margin-top: 20px;
-    }
-}
-
 #clearInput {
     width: 50%;
     height: 30px;
     border-radius: 15px;
-    font-family: arial;
-    font-size: 12px;
+    font-family:party;
+    font-size: 1rem;
     letter-spacing: 2px;
     color: rgb(255, 255, 255);
     background-image:linear-gradient(to top , rgb(112, 0, 0), rgb(209, 1, 1));
@@ -291,18 +281,106 @@ cursor: pointer;
 .generous {
     position: absolute;
     visibility: hidden; 
-    top: 50%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height:300px;
+    width: 320px;
+    height:320px;
     border-radius: 150px;
     color: rgb(255, 255, 255);
     font-size: 1.6rem;
-    border: 2px solid rgb(255, 255, 255);
     background-image:linear-gradient(to top , rgb(112, 0, 0), rgb(209, 1, 1));
-    box-shadow:0px 0px 30px rgb(49, 70, 97);
+    box-shadow:0px 0px 30px rgb(28, 42, 59);
+    
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wow {
+    visibility: hidden;
+    transition: 3s ease-in-out;
+    z-index: 5;
+    text-shadow: 0px 2px 5px rgb(46, 0, 0);
+    font-family: party;
+}
+
+.wowRotate {
+    transform: rotate(1800deg);
+}
+
+/* Media Queries */
+ @media screen and ( max-height: 850px) {
+    #container  {
+       margin-top: 100px;
+       margin-bottom: 40px;
+    }
+}
+
+@media screen and ( max-width: 650px) {
+    #container  {
+        width: 400px;
+        height: 650px;
+    }
+    .clear {
+        margin-top: 20px;
+    }
+     #totalTip  {
+        margin-top: 20px;
+    }
+    #people  {
+       width: 22%;
+    }
+    h2 {
+        letter-spacing: 0px;
+    }
+    .bottomIcon{
+        left: 85px;
+        bottom: 212px;
+    }
+    .bottomIcon2{
+        right: 85px;
+        bottom: 212px;
+    }
+  }
+
+  @media screen and ( max-width: 450px) {
+    #container  {
+        width: 360px;
+        height: 650px;
+    }
+    .bottomIcon{
+        left: 75px;
+        bottom: 212px;
+    }
+    .bottomIcon2{
+        right: 75px;
+        bottom: 212px;
+    }
+    #myButton {
+        font-size: 1.2rem;
+    }
+    #people::placeholder{
+        font-size: .8rem;
+    }
+  }
+
+  @media screen and ( max-width: 380px) {
+    #container  {
+        width: 340px;
+    }
+    #people::placeholder{
+        font-size: .7rem;
+    }
+
+    .howMany, .howMuch, .service {
+        font-size: .9rem;
+    }
 }
