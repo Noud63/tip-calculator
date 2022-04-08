@@ -66,7 +66,7 @@ function showMessage(serviceQual) {
         setTimeout(() => {
             document.querySelector('.wow').style.visibility = 'hidden'
         }, 3000)
-        return ()=> {
+        return () => {
             clearTimeout(timer)
         }
 
@@ -77,7 +77,7 @@ function showMessage(serviceQual) {
 //Rotate dollar sign on click
 function rotateDollar() {
     document.querySelector('.topIcon').classList.toggle('topIconRotate');
-    document.querySelector('.bottomIcon').classList.toggle('topIconRotate');
+    document.querySelector('.bottomIcon').classList.toggle('topIconRotate2');
     document.querySelector('.bottomIcon2').classList.toggle('topIconRotate2');
     pushButton.disabled = true
 };
